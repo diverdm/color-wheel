@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/jquery-ui.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="stack">
+            <img src="./img/photo/photo.jpg">
+            <img id="thing-1" src="./img/photo/grayscale.jpg">
+            <div id="color-1" class="color"></div>
+            <img id="thing-2" src="./img/photo/grayscale.jpg">
+            <div id="color-2" class="color"></div>
+            <img id="thing-3" src="./img/photo/grayscale.jpg">
+            <div id="color-3" class="color"></div>
+            <img id="thing-4" src="./img/photo/grayscale.jpg">
+            <div id="color-4" class="color"></div>
+        </div>
+        <div class="params">
+            <canvas id="canvas-wheel" width="300" height="300"></canvas>
+            <div id="buttons">
+                <button class="ui-button ui-corner-all btn-mode-set" data-modename="mono"> <img src="./img/color-wheel/mono.png" width="24"></button>
+                <button class="ui-button ui-corner-all btn-mode-set" data-modename="kompl"><img src="./img/color-wheel/kompl.png" width="24"></button>
+                <button class="ui-button ui-corner-all btn-mode-set" data-modename="triada"><img src="./img/color-wheel/triada.png" width="24"></button>
+                <button class="ui-button ui-corner-all btn-mode-set" data-modename="tetrada"><img src="./img/color-wheel/tetrada.png" width="24"></button>
+                <button class="ui-button ui-corner-all btn-mode-set" data-modename="razd-kompl"><img src="./img/color-wheel/razd-kompl.png" width="24"></button>
+                <button class="ui-button ui-corner-all btn-mode-set" data-modename="analog"><img src="./img/color-wheel/analog.png" width="24"></button>
+                <button class="ui-button ui-corner-all btn-mode-set" data-modename="analog-kompl"><img src="./img/color-wheel/analog-kompl.png" width="24"></button>
+            </div>
+            <div>
+                <p>
+                    Режим наложения:
+                    <select id="blend-mode">
+                        <option>normal</option>
+                        <option>multiply</option>
+                        <option>screen</option>
+                        <option selected>overlay</option>
+                        <option>darken</option>
+                        <option>lighten</option>
+                        <option>color-dodge</option>
+                        <option>color-burn</option>
+                        <option>difference</option>
+                        <option>exclusion</option>
+                        <option>hue</option>
+                        <option>saturation</option>
+                        <option>color</option>
+                        <option>luminosity</option>
+                    </select>
+                </p>
+            </div>
+            <div id="radios">
+                <label for="radio-1">Одежда</label>
+                <input type="radio" name="thing-group" data-value="1" id="radio-1" checked>
+
+                <label for="radio-2">Брюки</label>
+                <input type="radio" name="thing-group" data-value="2" id="radio-2">
+
+                <label for="radio-3">Сумка</label>
+                <input type="radio" name="thing-group" data-value="3" id="radio-3">
+
+                <label for="radio-4">Обувь</label>
+                <input type="radio" name="thing-group" data-value="4" id="radio-4">
+            </div>
+            <div id="sliders">
+                <label>Тон:</label>
+                <div id="hue-slider"></div>
+                <label>Насыщенность:</label>
+                <div id="saturation-slider"></div>
+                <label>Яркость:</label> <!--  -->
+                <div id="lightness-slider"></div>
+            </div>
+        </div>
+        <!-- <div id="test" style="width: 300px; height:300px; background-color: white;"></div> -->
+    </div>
+
+    <script src="./js/jquery-3.5.1.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <script src="./js/ColorWheel.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

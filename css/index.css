@@ -1,0 +1,89 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container {
+    display: flex;
+}
+
+.stack {
+    width: 420px;
+    height: 635px;
+}
+
+.stack img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.stack .color {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 420px;
+    height: 635px;
+    mix-blend-mode: overlay;
+}
+
+#color-wheel {
+    margin-bottom: 20px;
+}
+
+#buttons, #radios {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#sliders {
+    width: 100%;
+}
+
+#sliders>* {
+    margin-bottom: 10px;
+}
+
+.params {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ui-slider-horizontal {
+    background: linear-gradient(to right, red 0%, rgb(255, 255, 0) 17%, lime 33%, cyan 50%, blue 66%, rgb(255, 0, 255) 83%, red 100%);
+}
+
+#thing-1 {
+    -webkit-mask-image: url('../img/photo/mask_1.png');
+}
+
+#thing-2 {
+    -webkit-mask-image: url('../img/photo/mask_2.png');
+}
+
+#thing-3 {
+    -webkit-mask-image: url('../img/photo/mask_3.png');
+}
+
+#thing-4 {
+    -webkit-mask-image: url('../img/photo/mask_4.png');
+}
+
+#color-1 {
+    -webkit-mask-image: url('../img/photo/mask_1.png');
+}
+
+#color-2 {
+    -webkit-mask-image: url('../img/photo/mask_2.png');
+}
+
+#color-3 {
+    -webkit-mask-image: url('../img/photo/mask_3.png');
+}
+
+#color-4 {
+    -webkit-mask-image: url('../img/photo/mask_4.png');
+}
