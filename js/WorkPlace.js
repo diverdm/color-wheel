@@ -48,13 +48,20 @@ class WorkPlace {
 
         }).bind(this));
 
+        // this.canvas.onclick = function(){
+        //     console.log('click', this);
+        //     this.render();
+        // }
         this.render();
+
     }
 
     render(t) {
-        console.log(this);
-
-        this.ctx.putImageData(this.images.photo.data, 0, 0);
-        requestAnimationFrame(this.render);
+        this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
+        if(this.images.photo.data) this.ctx.putImageData(this.images.photo.data, 0, 0);
+        this.ctx.globalCompositeOperation = 'color';
+        //if(this.images.grayscale.data) this.ctx.putImageData(this.images.grayscale.data, 0, 0);
+        if(this.images.mask_1.data) this.ctx.putImageData(this.images.mask_1.data, 0, 0);
+        requestAnimationFrame(this.render.bind(this));
     }
 }
