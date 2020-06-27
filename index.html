@@ -12,7 +12,8 @@
 
 <body>
     <div class="container">
-        <div class="stack">
+        <canvas id="canvas-workplace" width="420" height="635"></canvas>
+        <!-- <div class="stack">
             <img src="./img/photo/photo.jpg">
             <img id="thing-1" src="./img/photo/grayscale.jpg">
             <div id="color-1" class="color"></div>
@@ -22,17 +23,24 @@
             <div id="color-3" class="color"></div>
             <img id="thing-4" src="./img/photo/grayscale.jpg">
             <div id="color-4" class="color"></div>
-        </div>
+        </div> -->
         <div class="params">
             <canvas id="canvas-wheel" width="300" height="300"></canvas>
             <div id="buttons">
-                <button class="ui-button ui-corner-all btn-mode-set" data-modename="mono"> <img src="./img/color-wheel/mono.png" width="24"></button>
-                <button class="ui-button ui-corner-all btn-mode-set" data-modename="kompl"><img src="./img/color-wheel/kompl.png" width="24"></button>
-                <button class="ui-button ui-corner-all btn-mode-set" data-modename="triada"><img src="./img/color-wheel/triada.png" width="24"></button>
-                <button class="ui-button ui-corner-all btn-mode-set" data-modename="tetrada"><img src="./img/color-wheel/tetrada.png" width="24"></button>
-                <button class="ui-button ui-corner-all btn-mode-set" data-modename="razd-kompl"><img src="./img/color-wheel/razd-kompl.png" width="24"></button>
-                <button class="ui-button ui-corner-all btn-mode-set" data-modename="analog"><img src="./img/color-wheel/analog.png" width="24"></button>
-                <button class="ui-button ui-corner-all btn-mode-set" data-modename="analog-kompl"><img src="./img/color-wheel/analog-kompl.png" width="24"></button>
+                <button class="ui-button ui-corner-all btn-mode-set" data-modename="mono"> <img
+                        src="./img/color-wheel/mono.png" width="24"></button>
+                <button class="ui-button ui-corner-all btn-mode-set" data-modename="kompl"><img
+                        src="./img/color-wheel/kompl.png" width="24"></button>
+                <button class="ui-button ui-corner-all btn-mode-set" data-modename="triada"><img
+                        src="./img/color-wheel/triada.png" width="24"></button>
+                <button class="ui-button ui-corner-all btn-mode-set" data-modename="tetrada"><img
+                        src="./img/color-wheel/tetrada.png" width="24"></button>
+                <button class="ui-button ui-corner-all btn-mode-set" data-modename="razd-kompl"><img
+                        src="./img/color-wheel/razd-kompl.png" width="24"></button>
+                <button class="ui-button ui-corner-all btn-mode-set" data-modename="analog"><img
+                        src="./img/color-wheel/analog.png" width="24"></button>
+                <button class="ui-button ui-corner-all btn-mode-set" data-modename="analog-kompl"><img
+                        src="./img/color-wheel/analog-kompl.png" width="24"></button>
             </div>
             <div>
                 <p>
@@ -82,6 +90,7 @@
 
     <script src="./js/jquery-3.5.1.min.js"></script>
     <script src="./js/jquery-ui.min.js"></script>
+    <script src="./js/WorkPlace.js"></script>
     <script src="./js/ColorWheel.js"></script>
     <script src="./js/index.js"></script>
 </body>

@@ -1,4 +1,7 @@
-var _wheel = null;
+var workplace = null;
+var wheel = null;
+
+
 let thingsPalette = [null, null, null, null];
 let currentThing = 1;
 
@@ -19,6 +22,7 @@ let colors = [
 
 $(document).ready(function () {
 
+    workplace = new WorkPlace("canvas-workplace");
     wheel = new ColorWheel("canvas-wheel", "triada", colors);
 
     $(document).on("palette-changed", function () {
