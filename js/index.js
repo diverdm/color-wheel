@@ -110,7 +110,7 @@ $(document).ready(function () {
     });
 
     $('#b-prev-model').click(function (e) {
-        currentModel = (currentModel == 1) ? models.length : 1;
+        currentModel = (currentModel == 1) ? models.length : currentModel - 1;
         setModel(currentModel);
     });
 
