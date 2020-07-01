@@ -1,21 +1,7 @@
 var _wheel = null;
 let thingsPalette = [null, null, null, null];
 let currentThing = 1;
-
-// colors = [
-//     "#F8931F", "#FFCC00", "#FDEE21",
-//     "#3AB54A", "#009345", "#01A89E",
-//     "#2E3192", "#662E91", "#92258E",
-//     "#D3145A", "#ED1B24", "#F15A25"
-// ];
-
-let colors = [
-    "#ff0000", "#ff8000", "#ffff00",
-    "#80ff00", "#00ff00", "#00ff80",
-    "#00ffff", "#0080ff", "#0000ff",
-    "#8000ff", "#ff00ff", "#ff0080"
-];
-
+let currentModel = 1;
 
 $(document).ready(function () {
 
@@ -122,6 +108,17 @@ $(document).ready(function () {
     $('#blend-mode').selectmenu({
         change: blendModeChanged
     });
+
+    $('#b-prev-model').click(function (e) {
+        currentModel = (currentModel == 1) ? models.length : 1;
+        setModel(currentModel);
+    });
+
+    $('#b-next-model').click(function (e) {
+        currentModel = (currentModel == models.length) ? 1 : currentModel + 1;
+        setModel(currentModel);
+    });
+
     function blendModeChanged(e, data) {
         console.log("Blend mode changed to '" + data.item.value + "'");
         $('.color').css('mix-blend-mode', data.item.value);
@@ -203,6 +200,32 @@ $(document).ready(function () {
             $('#color-' + String(i + 1)).css('background-color', thingsPalette[i]);
         }
     }
+
+    function setModel(n) {
+        $('#photo').attr('src', './img/models/' + String(n) + '/photo.jpg');
+
+        $('#thing-1').attr('src', models[n - 1].grayscale);
+        $('#thing-2').attr('src', models[n - 1].grayscale);
+        $('#thing-3').attr('src', models[n - 1].grayscale);
+        $('#thing-4').attr('src', models[n - 1].grayscale);
+
+        $('#thing-1').css('-webkit-mask-image', 'url("' + models[n - 1].mask_1 + '")');
+        $('#thing-2').css('-webkit-mask-image', 'url("' + models[n - 1].mask_2 + '")');
+        $('#thing-3').css('-webkit-mask-image', 'url("' + models[n - 1].mask_3 + '")');
+        $('#thing-4').css('-webkit-mask-image', 'url("' + models[n - 1].mask_4 + '")');
+
+        $('#color-1').css('-webkit-mask-image', 'url("' + models[n - 1].mask_1 + '")');
+        $('#color-2').css('-webkit-mask-image', 'url("' + models[n - 1].mask_2 + '")');
+        $('#color-3').css('-webkit-mask-image', 'url("' + models[n - 1].mask_3 + '")');
+        $('#color-4').css('-webkit-mask-image', 'url("' + models[n - 1].mask_4 + '")');
+
+        $('#model-label-1').text(models[n - 1].labels[0]);
+        $('#model-label-2').text(models[n - 1].labels[1]);
+        $('#model-label-3').text(models[n - 1].labels[2]);
+        $('#model-label-4').text(models[n - 1].labels[3]);
+    }
+
+    setModel(1);
 
     $.event.trigger('palette-changed', [wheel.palette]);
 });

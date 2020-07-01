@@ -436,8 +436,6 @@ class ColorWheel {
 
     }
     canvasClick(e) {
-        console.log('something');
-
         let color = e.data.obj.getColor(e.originalEvent.offsetX, e.originalEvent.offsetY);
         e.data.obj.updatePalette(color);
         $.event.trigger('palette-changed', [e.data.obj.palette]);

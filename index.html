@@ -13,26 +13,33 @@
 <body>
     <div class="container">
         <div class="stack">
-            <img src="./img/photo/photo.jpg">
-            <img id="thing-1" src="./img/photo/grayscale.jpg">
+            <img id="photo">
+            <img id="thing-1">
             <div id="color-1" class="color"></div>
-            <img id="thing-2" src="./img/photo/grayscale.jpg">
+            <img id="thing-2">
             <div id="color-2" class="color"></div>
-            <img id="thing-3" src="./img/photo/grayscale.jpg">
+            <img id="thing-3">
             <div id="color-3" class="color"></div>
-            <img id="thing-4" src="./img/photo/grayscale.jpg">
+            <img id="thing-4">
             <div id="color-4" class="color"></div>
         </div>
         <div class="params">
             <canvas id="canvas-wheel" width="300" height="300"></canvas>
             <div id="buttons">
-                <button class="ui-button ui-corner-all btn-mode-set" data-modename="mono"> <img src="./img/color-wheel/mono.png" width="24"></button>
-                <button class="ui-button ui-corner-all btn-mode-set" data-modename="kompl"><img src="./img/color-wheel/kompl.png" width="24"></button>
-                <button class="ui-button ui-corner-all btn-mode-set" data-modename="triada"><img src="./img/color-wheel/triada.png" width="24"></button>
-                <button class="ui-button ui-corner-all btn-mode-set" data-modename="tetrada"><img src="./img/color-wheel/tetrada.png" width="24"></button>
-                <button class="ui-button ui-corner-all btn-mode-set" data-modename="razd-kompl"><img src="./img/color-wheel/razd-kompl.png" width="24"></button>
-                <button class="ui-button ui-corner-all btn-mode-set" data-modename="analog"><img src="./img/color-wheel/analog.png" width="24"></button>
-                <button class="ui-button ui-corner-all btn-mode-set" data-modename="analog-kompl"><img src="./img/color-wheel/analog-kompl.png" width="24"></button>
+                <button class="ui-button ui-corner-all btn-mode-set" data-modename="mono"> <img
+                        src="./img/color-wheel/mono.png" width="24"></button>
+                <button class="ui-button ui-corner-all btn-mode-set" data-modename="kompl"><img
+                        src="./img/color-wheel/kompl.png" width="24"></button>
+                <button class="ui-button ui-corner-all btn-mode-set" data-modename="triada"><img
+                        src="./img/color-wheel/triada.png" width="24"></button>
+                <button class="ui-button ui-corner-all btn-mode-set" data-modename="tetrada"><img
+                        src="./img/color-wheel/tetrada.png" width="24"></button>
+                <button class="ui-button ui-corner-all btn-mode-set" data-modename="razd-kompl"><img
+                        src="./img/color-wheel/razd-kompl.png" width="24"></button>
+                <button class="ui-button ui-corner-all btn-mode-set" data-modename="analog"><img
+                        src="./img/color-wheel/analog.png" width="24"></button>
+                <button class="ui-button ui-corner-all btn-mode-set" data-modename="analog-kompl"><img
+                        src="./img/color-wheel/analog-kompl.png" width="24"></button>
             </div>
             <div>
                 <p>
@@ -56,16 +63,16 @@
                 </p>
             </div>
             <div id="radios">
-                <label for="radio-1">Одежда</label>
+                <label for="radio-1"><span id="model-label-1">1</span></label>
                 <input type="radio" name="thing-group" data-value="1" id="radio-1" checked>
 
-                <label for="radio-2">Брюки</label>
+                <label for="radio-2"><span id="model-label-2">2</span></label>
                 <input type="radio" name="thing-group" data-value="2" id="radio-2">
 
-                <label for="radio-3">Сумка</label>
+                <label for="radio-3"><span id="model-label-3">3</span></label>
                 <input type="radio" name="thing-group" data-value="3" id="radio-3">
 
-                <label for="radio-4">Обувь</label>
+                <label for="radio-4"><span id="model-label-4">4</span></label>
                 <input type="radio" name="thing-group" data-value="4" id="radio-4">
             </div>
             <div id="sliders">
@@ -76,12 +83,17 @@
                 <label>Яркость:</label> <!--  -->
                 <div id="lightness-slider"></div>
             </div>
+            <div>
+                <button id='b-prev-model'>Предыдущая модель</button>
+                <button id='b-next-model'>Следующая модель</button>
+            </div>
         </div>
         <!-- <div id="test" style="width: 300px; height:300px; background-color: white;"></div> -->
     </div>
 
     <script src="./js/jquery-3.5.1.min.js"></script>
     <script src="./js/jquery-ui.min.js"></script>
+    <script src="./js/config.js"></script>
     <script src="./js/ColorWheel.js"></script>
     <script src="./js/index.js"></script>
 </body>
